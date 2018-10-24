@@ -38,7 +38,7 @@ class Customer {
 let deliveryId = 0;
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
-    this.id = ++deliveryId
+    this.id = ++deliveryId;
     if (mealId) {this.mealId = mealId;};
     if (neighborhoodId) {this.neighborhoodId = neighborhoodId;};
     if (customerId) {this.customerId = customerId;};

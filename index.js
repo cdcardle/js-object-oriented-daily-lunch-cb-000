@@ -50,13 +50,9 @@ class Customer {
     return store.deliveries.filter(delivery => delivery.customerId === this.id);
   }
 
-  // meals() {
-  //   return this.meals.map(
-  //     function(meal){
-  //       return meal.customers() === this
-  //     }
-  //   )
-  // }
+  meals() {
+    return store.meals.filter(meal => meal.customerId === this.id);
+  }
 }
 
 let deliveryId = 0;

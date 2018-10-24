@@ -22,7 +22,7 @@ class Neighborhood {
     return this.deliveries().map(
       function(delivery){
         return delivery.customer()
-      }.bind(this)
+      }
     )
   }
 }

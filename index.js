@@ -18,13 +18,13 @@ class Neighborhood {
     );
   }
 
-  customers() {
-    return this.deliveries.map(
-      function(delivery){
-        return delivery.customer()
-      }
-    )
-  }
+  // customers() {
+  //   return this.deliveries.map(
+  //     function(delivery){
+  //       return delivery.customer()
+  //     }
+  //   )
+  // }
 }
 
 let mealId = 0;
@@ -36,6 +36,12 @@ class Meal {
 
     store.meals.push(this)
   }
+
+  // customers() {
+  //   return store.customers.filter(
+  //     function(customer)
+  //   )
+  // }
 }
 
 let customerId = 0;
@@ -46,6 +52,14 @@ class Customer {
     if (neighborhoodId) {this.neighborhoodId = neighborhoodId;};
 
     store.customers.push(this)
+  }
+
+  deliveries() {
+    return store.deliveries.filter(
+      function(delivery){
+        return delivery.customerId === this.id;
+      }.bind(this)
+    );
   }
 }
 
@@ -58,5 +72,9 @@ class Delivery {
     if (customerId) {this.customerId = customerId;};
 
     store.deliveries.push(this)
+  }
+
+  customer() {
+
   }
 }

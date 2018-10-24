@@ -17,6 +17,14 @@ class Neighborhood {
       }.bind(this)
     );
   }
+
+  customers() {
+    return this.deliveries.map(
+      function(delivery){
+        return delivery.customer()
+      }
+    )
+  }
 }
 
 let mealId = 0;

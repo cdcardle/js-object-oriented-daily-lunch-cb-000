@@ -20,9 +20,18 @@ class Meal {
 
 let customerId = 0;
 class Customer {
-  constructor(name, neighborhoodId) {
+  constructor(name, neighborhood) {
     this.id = ++customerId;
     this.name = name;
-    if (neighborhoodId) {this.neighborhoodId = neighborhoodId;};
+    if (neighborhood) {this.neighborhoodId = neighborhood.id;};
+  }
+}
+
+let deliveryId = 0;
+class Delivery {
+  constructor(meal, neighborhood, customer) {
+    if (meal) {this.mealId = meal.id;};
+    if (neighborhood) {this.neighborhoodId = neighborhood.id;};
+    if (customer) {this.customerId = customer.id;};
   }
 }

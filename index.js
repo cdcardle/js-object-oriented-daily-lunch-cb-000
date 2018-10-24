@@ -32,6 +32,10 @@ class Meal {
   deliveries() {
     return store.deliveries.filter(delivery =>delivery.mealId === this.id);
   }
+
+  // customers() {
+  //
+  // }
 }
 
 let customerId = 0;
@@ -48,9 +52,9 @@ class Customer {
     return store.deliveries.filter(delivery => delivery.customerId === this.id);
   }
 
-  // meals() {
-  //   return store.meals.filter(meal => meal.customerId === this.id);
-  // }
+  meals() {
+    return this.deliveries.map(delivery => delivery.customerId === this.id;);
+  }
 }
 
 let deliveryId = 0;

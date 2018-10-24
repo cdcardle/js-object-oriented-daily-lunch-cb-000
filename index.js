@@ -28,12 +28,6 @@ class Meal {
 
     store.meals.push(this)
   }
-
-  // customers() {
-  //   return store.customers.filter(
-  //     function(customer)
-  //   )
-  // }
 }
 
 let customerId = 0;

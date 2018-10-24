@@ -17,6 +17,8 @@ class Meal {
     this.id = ++mealId;
     this.title = title;
     this.price = price;
+
+    store.meals.push(this)
   }
 }
 
@@ -28,6 +30,8 @@ class Customer {
     if (neighborhoodId) {
       this.neighborhoodId = neighborhoodId;
     };
+
+    store.customers.push(this)
   }
 }
 
@@ -37,5 +41,7 @@ class Delivery {
     if (mealId) {this.mealId = mealId;};
     if (neighborhoodId) {this.neighborhoodId = neighborhoodId;};
     if (customerId) {this.customerId = customerId;};
+
+    store.deliveries.push(this)
   }
 }

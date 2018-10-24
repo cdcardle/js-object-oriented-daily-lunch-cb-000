@@ -21,7 +21,7 @@ class Neighborhood {
   customers() {
     return this.deliveries().map(
       function(delivery){
-        return [...new Set(delivery.customer())];
+        return new Set(delivery.customer());
       }
     )
   }

@@ -9,6 +9,12 @@ class Neighborhood {
 
     store.neighborhoods.push(this)
   }
+
+  deliveries() {
+    store.deliveries.filter(
+      (delivery) => delivery.neighborhoodId === delivery.id;
+    )
+  }
 }
 
 let mealId = 0;

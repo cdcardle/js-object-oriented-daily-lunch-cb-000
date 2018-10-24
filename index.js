@@ -23,7 +23,7 @@ class Neighborhood {
       function(delivery){
         return delivery.customer()
       }
-    )
+    ).bind(this)
   }
 }
 

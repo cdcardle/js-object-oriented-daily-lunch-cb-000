@@ -30,7 +30,7 @@ class Meal {
   }
 
   customers() {
-    return store.customers.filter(customer =>customer.neighborhoodId === this.id);
+    return store.customers.filter(customer =>customer.mealId === this.id);
   }
 }
 

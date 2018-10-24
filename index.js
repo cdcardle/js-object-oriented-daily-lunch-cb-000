@@ -53,7 +53,7 @@ class Customer {
   }
 
   meals() {
-    return this.deliveries.map(delivery => delivery.customerId === this.id;);
+    return this.deliveries.map(delivery => (delivery.customerId === this.id;));
   }
 }
 

@@ -11,7 +11,7 @@ class Neighborhood {
   }
 
   deliveries() {
-    store.deliveries.filter(
+    return store.deliveries.filter(
       function(delivery){
         return delivery.neighborhoodId === this.id;
       }.bind(this)

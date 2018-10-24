@@ -28,6 +28,10 @@ class Meal {
 
     store.meals.push(this)
   }
+
+  customers() {
+    return store.customers.filter(customer =>customer.neighborhoodId === this.id);
+  }
 }
 
 let customerId = 0;

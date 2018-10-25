@@ -53,11 +53,7 @@ class Customer {
   }
 
   meals() {
-    this.deliveries().forEach(
-      function(delivery){
-          return store.meals.find(meal => (meal.id === delivery.mealId));
-    	}
-    )
+    return this.deliveries().map(delivery => delivery.meal());
   }
 }
 

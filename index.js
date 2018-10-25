@@ -37,6 +37,10 @@ class Meal {
     let thisCustomers = this.deliveries().map(delivery => delivery.customer());
     return [...new Set(thisCustomers)];
   }
+
+  static byPrice() {
+    store.meals.sort((a, b) => (a.price - b.price));
+  }
 }
 
 let customerId = 0;

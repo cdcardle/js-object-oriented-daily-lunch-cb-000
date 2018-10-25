@@ -33,9 +33,9 @@ class Meal {
     return store.deliveries.filter(delivery =>delivery.mealId === this.id);
   }
 
-  // customers() {
-  //
-  // }
+  customers() {
+    return this.deliveries.map(delivery => delivery.customer;)
+  }
 }
 
 let customerId = 0;
